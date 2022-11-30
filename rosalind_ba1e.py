@@ -2,7 +2,7 @@ def clump_finding(s, k, L, t):
     res = []
     for i in range(len(s)-L+1):
         for j in range(i,i+L-k):
-            if s[i:i+L].count(s[j:j+k]) == t:
+            if s[i:i+L].count(s[j:j+k]) >= t:
                 res.append(s[j:j+k])
     res = list(set(res))
     return res
